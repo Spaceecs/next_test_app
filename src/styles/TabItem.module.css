@@ -5,19 +5,23 @@
     cursor: pointer;
     white-space: nowrap;
     font-size: 14px;
-    display: flex;
     align-items: center;
     gap: 8px;
     border-top: 2px solid transparent;
     transition: border-color 0.3s ease;
 }
 
-.tabButton:hover {
-    background-color: #7F858D;
-}
-
 .tabButtonActive {
     border-top-color: #0070f3;
     font-weight: 600;
     background-color: #F1F5F8;
+}
+
+.tabButtonContainer {
+    overflow: hidden;
+}
+
+
+.tabButtonContainer:hover {
+    background-color: #7F858D;
 }
