@@ -73,7 +73,6 @@ export default function TabsContainer() {
         let visibleUnpinned: Tab[] = [];
         let hiddenUnpinned: Tab[] = [];
 
-        // Спочатку припускаємо, що overflow кнопки немає
         for (const tab of unpinnedTabs) {
             if (usedWidth + TAB_WIDTH <= containerWidth) {
                 visibleUnpinned.push(tab);
@@ -83,7 +82,6 @@ export default function TabsContainer() {
             }
         }
 
-        // Якщо є приховані таби, враховуємо місце під кнопку overflow
         if (hiddenUnpinned.length > 0) {
             let adjustedWidth = containerWidth - OVERFLOW_BUTTON_WIDTH;
 
@@ -153,18 +151,7 @@ export default function TabsContainer() {
         >
             <div
                 ref={containerRef}
-                style={{
-                    display: "flex",
-                    overflow: "hidden",
-                    alignItems: "center",
-                    gap: "4px",
-                    width: "100%",
-                    position: "relative",
-                    padding: "4px",
-                    borderBottom: "1px solid #ccc",
-                    background: "#fafafa",
-                    userSelect: "none",
-                }}
+                style={{userSelect: "none"}}
             >
                 {pinned.map((tab) => (
                     <TabItem

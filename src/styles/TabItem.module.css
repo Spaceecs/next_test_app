@@ -18,7 +18,15 @@
 }
 
 .tabButtonContainer {
+    display: flex;
     overflow: hidden;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    position: relative;
+    padding: 4px;
+    border-bottom: 1px solid #ccc;
+    background: #fafafa;
 }
 
 
